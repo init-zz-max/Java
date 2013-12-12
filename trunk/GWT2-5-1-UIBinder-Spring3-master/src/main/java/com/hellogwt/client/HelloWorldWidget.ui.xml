@@ -1,0 +1,25 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'
+             ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
+             ui:generateLocales="default">
+
+    <ui:with type="com.hellogwt.client.bundle.css.MyCssExample" field="res"/>
+
+    <ui:with field='res2' type='com.hellogwt.client.bundle.css.MyCssResource'/>
+
+    <ui:style>
+        .pretty {
+            background-color: Skyblue;
+        }
+    </ui:style>
+
+
+    <g:HTMLPanel>
+
+        <g:ListBox ui:field='listBox' visibleItemCount='1' styleName='{style.pretty}'/>
+
+        <g:Label ui:field='label' styleName='{res.css.redColor}'/>
+
+    </g:HTMLPanel>
+
+</ui:UiBinder>
