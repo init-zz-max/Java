@@ -29,26 +29,22 @@ public class MatrixSpiral {
         for (int i = 0; i < size / 2 + 1; i++) {
             //printRow
             for (int j = i; j <= size - i; j++) {
-                System.out.println(matrix[i][j]);
-                res.append(matrix[i][j]);
+                res.append(" - " + matrix[i][j]);
             }
 
             //printColumn
             for (int j = i + 1; j <= size - i; j++) {
-                System.out.println(matrix[j][size - i]);
-                res.append(matrix[j][size - i]);
+                res.append(" - " + matrix[j][size - i]);
             }
 
             // printRowBack
             for (int j = size - i - 1; j >= i; j--) {
-                System.out.println(matrix[size - i][j]);
-                res.append(matrix[size - i][j]);
+                res.append(" - " + matrix[size - i][j]);
             }
 
             //printColumnUp
             for (int j = size - i - 1; j >= i + 1; j--) {
-                System.out.println(matrix[j][i]);
-                res.append(matrix[j][i]);
+                res.append(" - " + matrix[j][i]);
             }
         }
         return res.toString();
