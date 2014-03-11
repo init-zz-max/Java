@@ -1,3 +1,4 @@
+import org.junit.Assert;
 import org.junit.Test;
 
 /**
@@ -5,15 +6,6 @@ import org.junit.Test;
  */
 public class MatrixSpiralTest {
 
-    public static String matrix3x4[][] = {
-            {"1", "2", "3"},
-
-            {"10", "11", "4"},
-
-            {"9", "12", "5"},
-
-            {"8", "7", "6"},
-    };
 
     public static String matrix5x5[][] = {
             {"1", "2", "3", "4", "5"},
@@ -28,11 +20,12 @@ public class MatrixSpiralTest {
     };
 
 
+    public static String res = "12345678910111213141516171819202122232425";
+
     @Test
     public void testCheckResultGame() {
         MatrixSpiral matrixSpiral = new MatrixSpiral();
-        matrixSpiral.spiralExecution(matrix5x5);
-        //matrixSpiral.spiralExecution(matrix3x4);
+        Assert.assertTrue(matrixSpiral.spiralExecutionFast(matrix5x5, 5).equals(res));
     }
 
 }
