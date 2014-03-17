@@ -1,7 +1,6 @@
 package sort;
 
 import org.junit.Test;
-import sort.BubbleSort;
 
 /**
  * Created by mzavgorodny on 3/7/14.
