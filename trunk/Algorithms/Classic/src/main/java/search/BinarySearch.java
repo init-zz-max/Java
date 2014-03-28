@@ -12,6 +12,7 @@ public class BinarySearch {
         int middle = (first + last) / 2;
 
         while (first <= last) {
+
             if (array[middle] > search) {
                 last = middle - 1;
             } else if (array[middle] < search) {
@@ -21,6 +22,7 @@ public class BinarySearch {
             if (array[middle] == search) {
                 return middle;
             }
+
             middle = (first + last) / 2;
         }
         return -1;
